@@ -45,7 +45,7 @@ namespace ReverseTicTacToeGame
         {
             get
             {
-                return this.SecondPlayerCheckBox.Checked;
+                return this.cbSecondPlyer.Checked;
             }
         }
 
@@ -60,7 +60,7 @@ namespace ReverseTicTacToeGame
 
         private void checkGameMode(object sender, EventArgs e)
         {
-            if (SecondPlayerCheckBox.Checked == true)
+            if (cbSecondPlyer.Checked == true)
             {
                 SecondPlayerTextBox.Enabled = true;
                 SecondPlayerTextBox.Text = string.Empty;
@@ -88,6 +88,26 @@ namespace ReverseTicTacToeGame
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void nUDRows_ValueChanged(object sender, EventArgs e)
+        {
+            nUDCols.Value = nUDRows.Value;
+        }
+
+        private void nUDCols_ValueChanged(object sender, EventArgs e)
+        {
+            nUDRows.Value = (sender as NumericUpDown).Value;
+        }
+
+        private void cbSecondPlyer_CheckedChanged(object sender, EventArgs e)
+        {
+            if((sender as CheckBox).Checked)
+            {
+                SecondPlayerTextBox.Text = string.Empty;
+            }
         }
     }
 }

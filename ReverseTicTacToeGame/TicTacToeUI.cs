@@ -25,7 +25,7 @@ namespace ReverseTicTacToeGame
         {
             this.CenterToScreen();
             InitializeComponent();
-            initGameSetting(i_SettingForm);
+            initGameSetting(i_SettingForm); // take info from settings form and pass that info to the logic
             
         }
 
