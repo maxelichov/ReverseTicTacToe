@@ -14,11 +14,11 @@ namespace ReverseTicTacToeLogic
 
 
 
-        // $G$ CSS-013 (-3) Input parameters names should start with i_PascaleCase.
-        public Square(int i_Row, int i_col)
+        
+        public Square(int i_Row, int i_Col)
         {
             m_Row = i_Row;
-            m_Col = i_col;
+            m_Col = i_Col;
         }
 
 

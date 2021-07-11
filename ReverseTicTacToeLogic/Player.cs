@@ -40,9 +40,12 @@ namespace ReverseTicTacToeLogic
             }
         }
 
-        public string Name()
+        public string Name
         {
-            return r_Name;
+            get
+            {
+                return r_Name;
+            }
         }
     }
 

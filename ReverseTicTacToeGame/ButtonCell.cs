@@ -10,21 +10,33 @@ namespace ReverseTicTacToeGame
 {
     internal class ButtonCell : Button
     {
-        private NextMove m_CellCoordinates;
+        private readonly int r_Row;
+        private readonly int r_Col;
 
-        internal ButtonCell(byte i_Row, byte i_Col)
+        internal ButtonCell(int i_Row, int i_Col)
         {
-            m_CellCoordinates.Row = i_Row;
-            m_CellCoordinates.Col = i_Col;
+            r_Row = i_Row;
+            r_Col = i_Col;
         }
 
-        internal NextMove CellCoordinates
+       public int Row
         {
             get
             {
-                return m_CellCoordinates;
+                return r_Row;
             }
         }
+
+        public int Col
+        {
+            get
+            {
+                return r_Col;
+            }
+
+              
+        }
+
     }
 
 }

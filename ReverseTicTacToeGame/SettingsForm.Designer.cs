@@ -31,8 +31,8 @@
             this.PlayersLabel = new System.Windows.Forms.Label();
             this.FirstPlayerLabel = new System.Windows.Forms.Label();
             this.cbSecondPlyer = new System.Windows.Forms.CheckBox();
-            this.FirstPlayerTextBox = new System.Windows.Forms.TextBox();
-            this.SecondPlayerTextBox = new System.Windows.Forms.TextBox();
+            this.tbFirstPlayerName = new System.Windows.Forms.TextBox();
+            this.tbSecondPlayerName = new System.Windows.Forms.TextBox();
             this.BoardSizeLabel = new System.Windows.Forms.Label();
             this.RowsLabel = new System.Windows.Forms.Label();
             this.nUDRows = new System.Windows.Forms.NumericUpDown();
@@ -75,24 +75,24 @@
             this.cbSecondPlyer.UseVisualStyleBackColor = true;
             this.cbSecondPlyer.CheckedChanged += new System.EventHandler(this.cbSecondPlyer_CheckedChanged);
             // 
-            // FirstPlayerTextBox
+            // tbFirstPlayerName
             // 
-            this.FirstPlayerTextBox.Location = new System.Drawing.Point(153, 163);
-            this.FirstPlayerTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.FirstPlayerTextBox.Name = "FirstPlayerTextBox";
-            this.FirstPlayerTextBox.Size = new System.Drawing.Size(148, 26);
-            this.FirstPlayerTextBox.TabIndex = 4;
+            this.tbFirstPlayerName.Location = new System.Drawing.Point(153, 163);
+            this.tbFirstPlayerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbFirstPlayerName.Name = "tbFirstPlayerName";
+            this.tbFirstPlayerName.Size = new System.Drawing.Size(148, 26);
+            this.tbFirstPlayerName.TabIndex = 4;
             // 
-            // SecondPlayerTextBox
+            // tbSecondPlayerName
             // 
-            this.SecondPlayerTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.SecondPlayerTextBox.Enabled = false;
-            this.SecondPlayerTextBox.Location = new System.Drawing.Point(153, 212);
-            this.SecondPlayerTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SecondPlayerTextBox.Name = "SecondPlayerTextBox";
-            this.SecondPlayerTextBox.Size = new System.Drawing.Size(148, 26);
-            this.SecondPlayerTextBox.TabIndex = 5;
-            this.SecondPlayerTextBox.Text = "Computer";
+            this.tbSecondPlayerName.BackColor = System.Drawing.SystemColors.Window;
+            this.tbSecondPlayerName.Enabled = false;
+            this.tbSecondPlayerName.Location = new System.Drawing.Point(153, 212);
+            this.tbSecondPlayerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSecondPlayerName.Name = "tbSecondPlayerName";
+            this.tbSecondPlayerName.Size = new System.Drawing.Size(148, 26);
+            this.tbSecondPlayerName.TabIndex = 5;
+            this.tbSecondPlayerName.Text = "Computer";
             // 
             // BoardSizeLabel
             // 
@@ -181,7 +181,7 @@
             this.buttonStart.TabIndex = 11;
             this.buttonStart.Text = "Start!";
             this.buttonStart.UseVisualStyleBackColor = true;
-            this.buttonStart.Click += new System.EventHandler(startButtonClicked);
+            this.buttonStart.Click += new System.EventHandler(this.startButtonClicked);
             // 
             // SettingsForm
             // 
@@ -194,8 +194,8 @@
             this.Controls.Add(this.nUDRows);
             this.Controls.Add(this.RowsLabel);
             this.Controls.Add(this.BoardSizeLabel);
-            this.Controls.Add(this.SecondPlayerTextBox);
-            this.Controls.Add(this.FirstPlayerTextBox);
+            this.Controls.Add(this.tbSecondPlayerName);
+            this.Controls.Add(this.tbFirstPlayerName);
             this.Controls.Add(this.cbSecondPlyer);
             this.Controls.Add(this.FirstPlayerLabel);
             this.Controls.Add(this.PlayersLabel);
@@ -215,8 +215,8 @@
         private System.Windows.Forms.Label PlayersLabel;
         private System.Windows.Forms.Label FirstPlayerLabel;
         private System.Windows.Forms.CheckBox cbSecondPlyer;
-        private System.Windows.Forms.TextBox FirstPlayerTextBox;
-        private System.Windows.Forms.TextBox SecondPlayerTextBox;
+        private System.Windows.Forms.TextBox tbFirstPlayerName;
+        private System.Windows.Forms.TextBox tbSecondPlayerName;
         private System.Windows.Forms.Label BoardSizeLabel;
         private System.Windows.Forms.Label RowsLabel;
         private System.Windows.Forms.NumericUpDown nUDRows;

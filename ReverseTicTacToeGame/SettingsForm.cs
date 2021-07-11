@@ -16,6 +16,37 @@ namespace ReverseTicTacToeGame
 
         private const string k_DefaultSecondPlayer = "Computer";
 
+
+
+        internal string GetHumanName()
+        {
+            return tbSecondPlayerName.Text;
+        }
+
+        internal string GetComputerName()
+        {
+            return k_DefaultSecondPlayer;
+        }
+        
+
+        internal eOpponnent Opponnent()
+        {
+            eOpponnent opponnent;
+
+            if(cbSecondPlyer.Checked == true)
+            {
+                opponnent = eOpponnent.Human;
+            }
+            else
+            {
+                opponnent = eOpponnent.Computer;
+            }
+
+            return opponnent;
+        }
+           
+
+      
         private void SettingsForm_Load(object sender, EventArgs e)
         {
 
@@ -30,24 +61,19 @@ namespace ReverseTicTacToeGame
             InitializeComponent();
         }
 
+       
 
 
         internal string FirstPlayerName
         {
            get
            {
-               return FirstPlayerTextBox.Text;
-            }
+               return tbFirstPlayerName.Text;
+           }
            
         }
 
-        internal bool PlayingAgaintTheComputer
-        {
-            get
-            {
-                return this.cbSecondPlyer.Checked;
-            }
-        }
+       
 
         internal int BoardSize
         {
@@ -62,13 +88,13 @@ namespace ReverseTicTacToeGame
         {
             if (cbSecondPlyer.Checked == true)
             {
-                SecondPlayerTextBox.Enabled = true;
-                SecondPlayerTextBox.Text = string.Empty;
+                tbSecondPlayerName.Enabled = true;
+                tbSecondPlayerName.Text = string.Empty;
             }
 
             else
             {
-                SecondPlayerTextBox.Text = k_DefaultSecondPlayer;
+                tbSecondPlayerName.Text = k_DefaultSecondPlayer;
             }
         }
 
@@ -87,10 +113,12 @@ namespace ReverseTicTacToeGame
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         
+
+
 
         private void nUDRows_ValueChanged(object sender, EventArgs e)
         {
@@ -106,7 +134,8 @@ namespace ReverseTicTacToeGame
         {
             if((sender as CheckBox).Checked)
             {
-                SecondPlayerTextBox.Text = string.Empty;
+                tbSecondPlayerName.Text = string.Empty;
+                tbSecondPlayerName.Enabled = true;
             }
         }
     }

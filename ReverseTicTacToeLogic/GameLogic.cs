@@ -8,20 +8,19 @@ namespace ReverseTicTacToeLogic
 {
     public class GameLogic
     {
-        // $G$ CSS-999 (-3) this member should be readonly
-        private NextMove m_Move = new NextMove();
-        private Board m_GameBoard;
-
-
+       
+        private readonly NextMove m_Move;
+        private readonly Board m_GameBoard;
         private readonly int r_BoardSize;
-        private Dictionary<int, List<Square>> m_RowDict;
-        private Dictionary<int, List<Square>> m_ColDict;
-        private Dictionary<int, List<Square>> m_DiagonalDict;
-        private Random generateRowAndCol = new Random();
+        private readonly Dictionary<int, List<Square>> m_RowDict;
+        private readonly Dictionary<int, List<Square>> m_ColDict;
+        private readonly Dictionary<int, List<Square>> m_DiagonalDict;
+        private readonly Random generateRowAndCol = new Random();
 
         public GameLogic(int i_BoardSize)
         {
             r_BoardSize = i_BoardSize;
+            m_Move = new NextMove();
             m_GameBoard = new Board(i_BoardSize);
             m_RowDict = new Dictionary<int, List<Square>>();
             m_ColDict = new Dictionary<int, List<Square>>();

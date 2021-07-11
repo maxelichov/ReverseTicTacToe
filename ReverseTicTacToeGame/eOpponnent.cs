@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReverseTicTacToeLogic
+namespace ReverseTicTacToeGame
 {
-    public enum ePlayerChoise
+    public enum eOpponnent
     {
-        END_GAME = 'e',
-        MAKE_A_MOVE = 'y',
-        QUIT = 'q'
+        Human = 1,
+        Computer = 0
     }
 }

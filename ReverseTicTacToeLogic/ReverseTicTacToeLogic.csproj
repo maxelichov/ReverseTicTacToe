@@ -51,7 +51,6 @@
     <Compile Include="eColNumbers.cs" />
     <Compile Include="eDiagonal.cs" />
     <Compile Include="eGameModeOptions.cs" />
-    <Compile Include="ePlayerChoise.cs" />
     <Compile Include="eRowNumbers.cs" />
     <Compile Include="eSymbol.cs" />
     <Compile Include="GameLogic.cs" />

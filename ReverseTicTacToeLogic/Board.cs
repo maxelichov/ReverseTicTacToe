@@ -15,9 +15,9 @@ namespace ReverseTicTacToeLogic
 
         private readonly int r_BoardSize;
         private StringBuilder m_ViewBoard;
-        private List<List<Square>> m_BoardRows;
-        private List<List<Square>> m_BoardCols;
-        private List<List<Square>> m_BoardDiagonal;
+        private readonly List<List<Square>> m_BoardRows;
+        private readonly List<List<Square>> m_BoardCols;
+        private readonly List<List<Square>> m_BoardDiagonal;
 
         public Board(int i_Size)
         {
@@ -50,7 +50,7 @@ namespace ReverseTicTacToeLogic
         {
             int matrixOrder = r_BoardSize;
 
-            return (i_NumOfTurnPlayed + 1 == matrixOrder * matrixOrder);
+            return (i_NumOfTurnPlayed == matrixOrder * matrixOrder);
         }
 
         public void InitRowList()
@@ -186,7 +186,7 @@ namespace ReverseTicTacToeLogic
         }
 
 
-        // $G$ CSS-013 (-3) Input parameters names should start with i_PascaleCase.
+        
         public bool MoveIsValid(NextMove io_Move)
         {
             return m_GameBoard[io_Move.Row - 1, io_Move.Col - 1].Symbol == eSymbol.EMPTY;
